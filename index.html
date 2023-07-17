@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="CSS/estilos.css" rel="stylesheet" type="text/css"/> <!-- AQUÍ LLAMAMOS UN CSS -->
+	<title>Calculos con Funciones</title>
+</head>
+<header>CALCULOS MATEMÁTICOS</header>
+<body>
+	<br>
+<div class="contenedor">
+	<br>
+	<br>
+	<input type="text" id="n1" size="1">
+	<select id="operador">
+			<option value="suma">+</option>
+			<option value="resta">-</option>
+			<option value="multiplicacion">*</option>
+			<option value="division">/</option>
+	</select>
+	<input type="text" id="n2" size="1">
+	<button class="btn" onclick="calc()"><span>Calcular</span></button>
+	<br>
+	<br>
+	<label id="resultado"></label>
+</div>
+<footer>
+	<p>Calculadora de Isidora Pizarro, Analista Programador.</p>
+</footer>
+<script type="text/javascript">
+	function calc()
+	{
+		let select = document.getElementById('operador');
+		let op = select.options[select.selectedIndex].value;
+		let n1 = Number(document.getElementById('n1').value);
+		let n2 = Number(document.getElementById('n2').value);
+		let result;
+
+		switch(op)
+		{
+			case "suma":
+				result = n1 + n2;
+				document.getElementById('resultado').innerHTML = n1 + " + " + n2 + " = " + result;
+				break;
+			case "resta":
+				result = n1 - n2;
+				document.getElementById('resultado').innerHTML = n1 + " - " + n2 + " = " + result;
+				break;
+			case "multiplicacion":
+				result = n1 * n2;
+				document.getElementById('resultado').innerHTML = n1 + " * " + n2 + " = " + result;
+				break;
+			case "division":
+				if (n2 == 0)
+				{
+					document.getElementById('resultado').innerHTML = "La división por cero no existe."
+				}
+				else
+				{
+					result = ((n1 / n2).toFixed(2));
+					document.getElementById('resultado').innerHTML = n1 + " / " + n2 + " = " + result;
+				}
+				break;
+		}
+	}
+</script>
+</body>
+</html>

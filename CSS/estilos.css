@@ -1,0 +1,79 @@
+/*ARCHIVO CSS*/
+body, html
+{
+	background: url(../IMG/gatomat.png);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+}
+
+button
+{
+	background: pink;
+	animation: movimiento 1s infinite;
+	font-family: "Courier New";
+	font-size: large;
+}
+@keyframes movimiento
+ {
+  from {background-color: pink;}
+  to {background-color: hotpink;}
+}
+
+div
+{
+	text-align: center;
+	background: url(../IMG/gatitofondo.png);
+	background-size: cover;
+	border: 5px solid pink;
+	width: 500px;
+	height: 250px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+label
+{
+	background: pink;
+	font-family: "Courier New";
+	font-size: large;
+}
+
+select
+{
+	background: pink;
+	animation: movimiento 1s infinite;
+	font-family: "Courier New";
+	font-size: large;
+}
+
+header
+{
+	text-align: center;
+	font-family: "Courier New";
+	font-size: xx-large;
+	color: white;
+}
+
+input
+{
+	background: pink;
+	font-family: "Courier New";
+	font-size: large;
+}
+
+footer{
+    position: relative;
+    margin-top: 350px;
+    height: 40px;
+    width: 100%;
+    padding: 25px 0px;
+    clear: both;
+    background: lightpink;
+    text-align: center;
+    color: #fff;
+    font-family: "Courier New";
+	font-size: large;
+}
